@@ -11,7 +11,7 @@
 ## 🚀 Key Features
 
 ### 📦 Software Release Tracking
-*   **Multi-Source Support**: Track releases from GitHub, GitLab (Cloud & Self-hosted), Codeberg, and F-Droid.
+*   **Multi-Source Support**: Track releases from Git, GitHub, GitLab, Gitea, Forgejo, BitBucklet, Codeberg and F-Droid.
 *   **Deep Categorization**: Organize your workspace with up to **5 levels** of nested categories.
 *   **Version History**: Maintain a complete history of the last 10 releases per repository.
 *   **Smart Filtering**: Filter by OS compatibility (Windows, Linux, macOS), categories, or instant search.
