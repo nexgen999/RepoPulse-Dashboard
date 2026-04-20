@@ -1,0 +1,21 @@
+{
+  "name": "RepoPulse Dashboard",
+  "short_name": "RepoPulse",
+  "description": "Ultimate Repository Release Dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#0078d4",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/repopulse/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/repopulse/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;700&family=JetBrains+Mono:wght@400;500;700&family=Fira+Code:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&family=Nunito:wght@400;700&family=Quicksand:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Merriweather:wght@400;700&family=Lora:wght@400;700&family=Rubik:wght@400;700&family=Karla:wght@400;700&family=Inconsolata:wght@400;700&family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;700&family=Work+Sans:wght@400;700&family=Titillium+Web:wght@400;700&family=Barlow:wght@400;700&family=Josefin+Sans:wght@400;700&family=Cabin:wght@400;700&family=Arimo:wght@400;700&family=Pacifico&family=Dancing+Script:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
+
+@layer base {
+  :root {
+    --accent: #0078d4;
+    --accent-foreground: #ffffff;
+    --background: #ffffff;
+    --bg-rgb: 255, 255, 255;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-rgb: 255, 255, 255;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0078d4;
+    --muted: #f3f3f3;
+    --muted-foreground: #616161;
+  }
+
+  .dark {
+    --background: #1a1a1a;
+    --bg-rgb: 26, 26, 26;
+    --foreground: #ffffff;
+    --card: #2b2b2b;
+    --card-rgb: 43, 43, 43;
+    --popover: #2b2b2b;
+    --popover-foreground: #ffffff;
+    --border: #3d3d3d;
+    --input: #3d3d3d;
+    --ring: #0078d4;
+    --muted: #333333;
+    --muted-foreground: #a1a1a1;
+  }
+
+  .midnight {
+    --background: #0a0c10;
+    --bg-rgb: 10, 12, 16;
+    --foreground: #f0f2f5;
+    --card: #161b22;
+    --card-rgb: 22, 27, 34;
+    --popover: #161b22;
+    --popover-foreground: #f0f2f5;
+    --border: #30363d;
+    --input: #30363d;
+    --ring: #58a6ff;
+    --muted: #21262d;
+    --muted-foreground: #8b949e;
+  }
+
+  .forest {
+    --background: #0d1a0d;
+    --bg-rgb: 13, 26, 13;
+    --foreground: #e6f2e6;
+    --card: #1a2e1a;
+    --card-rgb: 26, 46, 26;
+    --popover: #1a2e1a;
+    --popover-foreground: #e6f2e6;
+    --border: #2d4a2d;
+    --input: #2d4a2d;
+    --ring: #4ade80;
+    --muted: #142414;
+    --muted-foreground: #86a686;
+  }
+
+  .sunset {
+    --background: #1a0f0f;
+    --bg-rgb: 26, 15, 15;
+    --foreground: #f2e6e6;
+    --card: #2e1a1a;
+    --card-rgb: 46, 26, 26;
+    --popover: #2e1a1a;
+    --popover-foreground: #f2e6e6;
+    --border: #4a2d2d;
+    --input: #4a2d2d;
+    --ring: #f87171;
+    --muted: #241414;
+    --muted-foreground: #a68686;
+  }
+
+  .ocean {
+    --background: #0f172a;
+    --bg-rgb: 15, 23, 42;
+    --foreground: #f1f5f9;
+    --card: #1e293b;
+    --card-rgb: 30, 41, 59;
+    --popover: #1e293b;
+    --popover-foreground: #f1f5f9;
+    --border: #334155;
+    --input: #334155;
+    --ring: #38bdf8;
+    --muted: #0f172a;
+    --muted-foreground: #94a3b8;
+  }
+}
+
+@layer components {
+  .fluent-glass {
+    background-color: rgba(var(--bg-rgb), var(--glass-opacity));
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .fluent-card {
+    @apply bg-card text-card-foreground rounded-xl border border-border shadow-sm transition-all duration-200 hover:shadow-md;
+    background-color: rgba(var(--card-rgb), var(--glass-opacity));
+    backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .fluent-button {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .fluent-button-primary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-accent-foreground hover:opacity-90;
+  }
+
+  .fluent-button-secondary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-muted text-muted-foreground hover:bg-muted/80;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-sans);
+}
