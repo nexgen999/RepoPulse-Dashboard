@@ -11,7 +11,7 @@
 ## 🚀 Fonctionnalités Clés
 
 ### 📦 Suivi des Releases Logicielles
-*   **Support Multi-Sources** : Suivez les versions de GitHub, GitLab (Cloud & Auto-hébergé), Codeberg et F-Droid.
+*   **Support Multi-Sources** : Suivez les versions de Git, GitHub, GitLab, Gitea, Forgejo, BitBucklet, Codeberg et F-Droid.
 *   **Catégorisation Profonde** : Organisez votre espace de travail avec jusqu'à **5 niveaux** de catégories imbriquées.
 *   **Historique des Versions** : Conservez un historique complet des 10 dernières versions par dépôt.
 *   **Filtrage Intelligent** : Filtrez par compatibilité OS (Windows, Linux, macOS), catégories ou recherche instantanée.
